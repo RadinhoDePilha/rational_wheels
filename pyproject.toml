@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "rational-wheels"
 version = "0.1.0"
-description = "Total arithmetic for rational numbers, infinity, and nullity."
+description = "Total arithmetic for rational numbers, infinity, and nullity based on wheels theory."
 readme = "README.md"
 requires-python = ">=3.9"
 license = "MIT"

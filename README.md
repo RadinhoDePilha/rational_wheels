@@ -45,6 +45,26 @@ python -m build
 
 The wheel and source distribution are written to `dist/`.
 
+## Publishing
+
+This repository includes GitHub Actions workflows for trusted publishing
+without storing PyPI tokens:
+
+- `.github/workflows/publish-testpypi.yml` publishes to TestPyPI;
+- `.github/workflows/publish-pypi.yml` publishes to PyPI.
+
+Configure a Trusted Publisher for each service with:
+
+1. Project name: `rational-wheels`
+2. Owner: the GitHub user or organization that owns this repository
+3. Repository: this repository's name
+4. Workflow: the exact workflow filename
+5. Environment: `testpypi` for TestPyPI or `pypi` for PyPI
+
+Create the corresponding GitHub environments before publishing. To publish
+to PyPI, create a GitHub Release; TestPyPI can also be started manually from
+the Actions tab or by pushing a version tag such as `v0.1.0`.
+
 ## License
 
 Rational Wheels is released under the [MIT License](LICENSE).
